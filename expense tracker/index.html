@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Traqueur</h1>
+        <form id="expense-form">
+          <input type="text" id="expense-name" placeholder="Expense name" required>
+          <input type="text" id="expense-amount" placeholder="Amount" required>
+          <select id="expense-category" required>
+            <option value="" disabled selected>Select Category</option>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Advertise">Advertise</option>
+            <option value="Others">Others</option>
+          </select>
+          <input type="date" id="expense-date" required>
+          <button type="submit">Add Expense</button>
+          </form>
+          <div class="expense-table">
+          <table>
+            <thead>
+                <tr>
+                    <th>Expense Name</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="expense-list"></tbody>
+          </table>
+        </div>
+        <div class="total-container">
+          <div class="expense-total">
+            <strong>Total:</strong>$<span id="expense-total">0</span>
+          </div>
+          <div class="filter">
+            <label for="filter-category">Filter by Category</label>
+            <select id="filter-category">
+                <option value="All">All</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Advertise">Advertise</option>
+                <option value="Others">Others</option>
+                 </select>
+          </div>
+        </div>
+    </div>
+   <script src="script.js"></script> 
+</body>
+</html>
